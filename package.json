@@ -24,7 +24,7 @@
     "@types/jest": "^29.5.14",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@vitejs/plugin-legacy": "^6.0.1",
-    "eslint": "^8.57.1",
+    "eslint": "^9.21.0",
     "eslint-config-standard-with-typescript": "^37.0.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-n": "^16.6.2",
