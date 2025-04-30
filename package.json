@@ -37,7 +37,7 @@
     "ts-jest": "^29.3.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
-    "vite": "^6.3.3",
+    "vite": "^6.3.4",
     "wallpaper-engine-types": "^1.0.12"
   },
   "dependencies": {
