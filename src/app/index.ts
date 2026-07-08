@@ -25,11 +25,13 @@ import { MainDisplayCollection } from './collection';
 import { isWpeEnabled } from './plugins';
 import {
   CountdownScreen,
+  InteractiveCountdownScreen,
   ProgressBarScreen,
   TextScrollerScreen,
   WelcomeScreen,
   WpePlayer2,
 } from './screens';
+import { loadCountdownTarget } from './screens/countdown-storage';
 import {
   AppSettings,
   DEFAULT_SETTINGS,
@@ -59,6 +61,9 @@ function determineDefaultScreen(): Screen<MainDisplayCollection> {
     case 'demo-progressbar':
       return new ProgressBarScreen();
     default:
+      if (loadCountdownTarget()) {
+        return new InteractiveCountdownScreen();
+      }
       return new WelcomeScreen();
   }
 }

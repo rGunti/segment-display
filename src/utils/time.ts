@@ -50,6 +50,19 @@ export function formatTime(
   return elements.filter((i) => i !== '').join(finalOptions.joinWith);
 }
 
+export function nextOccurrenceOf(
+  hour: number,
+  minute: number,
+  from: Date = new Date(),
+): Date {
+  const target = new Date(from);
+  target.setHours(hour, minute, 0, 0);
+  if (target.getTime() <= from.getTime()) {
+    target.setDate(target.getDate() + 1);
+  }
+  return target;
+}
+
 function formatTimeComponent(
   value: number,
   padWithZero: boolean,
