@@ -2,7 +2,7 @@ import {
   WallpaperMediaPlaybackEvent,
   WallpaperMediaPropertiesEvent,
   WallpaperMediaTimelineEvent,
-} from 'wallpaper-engine-types';
+} from '../../types/wallpaper-engine';
 
 export interface WpeEventReceiver {
   readonly supportsWpeEvents: true;

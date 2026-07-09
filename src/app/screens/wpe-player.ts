@@ -2,7 +2,7 @@ import {
   WallpaperMediaPlaybackEvent,
   WallpaperMediaPropertiesEvent,
   WallpaperMediaTimelineEvent,
-} from 'wallpaper-engine-types';
+} from '../../types/wallpaper-engine';
 import { Logger } from '../../log';
 import {
   center,

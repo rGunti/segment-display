@@ -3,7 +3,7 @@ import {
   WallpaperMediaPlaybackState,
   WallpaperMediaPropertiesEvent,
   WallpaperMediaTimelineEvent,
-} from 'wallpaper-engine-types';
+} from '../../types/wallpaper-engine';
 import { TextScrollerScreen } from '.';
 import { center, formatTime, left, repeat } from '../../utils';
 import {
