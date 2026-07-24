@@ -7,6 +7,7 @@
   --color-background: black;
   --color-on: red;
   --color-off: rgba(255, 0, 0, 0.1);
+  --backglow-opacity: 1;
 
   // ** Base Style **
   font-family: system-ui;
@@ -69,6 +70,10 @@ body {
 .svg-seg {
   fill: var(--color-off);
   transition: all var(--fade-out-time) ease;
+
+  &:not(.svg-seg-on) {
+    opacity: var(--backglow-opacity, 1);
+  }
 }
 
 .svg-seg-on {

@@ -36,6 +36,7 @@ export interface AppSettings {
   segmentColor: string;
   backgroundColor: string;
   timeStyle: DisplayStyle;
+  backglow: number;
 }
 
 export const DEFAULT_SETTINGS: AppSettings = {
@@ -45,4 +46,5 @@ export const DEFAULT_SETTINGS: AppSettings = {
   segmentColor: 'rgba(255, 0, 0, 0.1)',
   backgroundColor: 'black',
   timeStyle: '16seg',
+  backglow: 1,
 };

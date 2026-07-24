@@ -24,6 +24,16 @@
         "type": "slider",
         "value": 500
       },
+      "backglow": {
+        "fraction": true,
+        "index": 3,
+        "max": 1,
+        "min": 0,
+        "order": 103,
+        "text": "Backglow",
+        "type": "slider",
+        "value": 1
+      },
       "schemecolor": {
         "order": 0,
         "text": "ui_browse_properties_scheme_color",

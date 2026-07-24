@@ -44,7 +44,7 @@ function onColorChange(settings: AppSettingsInterface, value: string) {
 
 function onFadeTimeChanged(
   settings: AppSettingsInterface,
-  prop: ('fadeInTime' | 'fadeOutTime') | string,
+  prop: ('fadeInTime' | 'fadeOutTime' | 'backglow') | string,
   value: number,
 ) {
   LOG.info('fade input changed', prop, value);
@@ -95,6 +95,7 @@ if (!timeStyleDropdown) {
 const fadeTimeInputs = [
   form.querySelector<HTMLInputElement>('input[type=number][name=fadeInTime]'),
   form.querySelector<HTMLInputElement>('input[type=number][name=fadeOutTime]'),
+  form.querySelector<HTMLInputElement>('input[type=number][name=backglow]'),
 ].filter((i) => !!i);
 if (fadeTimeInputs.length === 0) {
   throw abort('Fade Time inputs missing');
@@ -135,6 +136,7 @@ setTimeout(() => {
   onTimeDisplayChange(settings, timeStyleDropdown.value as DisplayStyle);
   onFadeTimeChanged(settings, 'fadeInTime', fadeTimeInputs[0].valueAsNumber);
   onFadeTimeChanged(settings, 'fadeOutTime', fadeTimeInputs[1].valueAsNumber);
+  onFadeTimeChanged(settings, 'backglow', fadeTimeInputs[2].valueAsNumber);
   onColorChange(settings, colorInput.value);
   previewApp.startTicking();
 }, 100);

@@ -66,6 +66,10 @@ body {
 .svg-seg {
   fill: var(--color-off);
   transition: all 500ms ease;
+
+  &:not(.svg-seg-on) {
+    opacity: var(--backglow-opacity, 1);
+  }
 }
 
 .svg-seg-on {

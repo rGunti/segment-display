@@ -62,6 +62,10 @@ body {
 
 .svg-seg {
   fill: var(--color-off);
+
+  &:not(.svg-seg-on) {
+    opacity: var(--backglow-opacity, 1);
+  }
 }
 
 .svg-seg-on {
