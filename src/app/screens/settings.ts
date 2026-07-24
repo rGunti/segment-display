@@ -14,6 +14,7 @@ const LABELS: Record<keyof AppSettings, string> = {
   color: 'Color',
   segmentColor: 'Segment Color',
   backgroundColor: 'Background Color',
+  backglow: 'Backglow',
 };
 
 const IGNORED_SETTINGS: (keyof AppSettings)[] = [
@@ -77,6 +78,7 @@ const SETTINGS_RENDER: Record<
   color: (c) => `${c.color}`,
   segmentColor: (c) => `${c.segmentColor}`,
   backgroundColor: (c) => `${c.backgroundColor}`,
+  backglow: (c) => `${Math.round(c.backglow * 100)}%`,
 };
 
 const SETTING_UPDATE: Record<
@@ -115,6 +117,10 @@ const SETTING_UPDATE: Record<
   },
   backgroundColor: () => {
     /* ignored */
+  },
+  backglow: (s, d) => {
+    const delta = d ? -0.05 : 0.05;
+    s.backglow = Math.max(Math.min(s.backglow + delta, 1), 0);
   },
 };
 

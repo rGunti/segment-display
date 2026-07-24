@@ -28,6 +28,9 @@ export class WpeSettingsInterface extends BaseAppSettingsInterface {
     if (properties.timestyle?.value !== undefined) {
       currentSettings.timeStyle = properties.timestyle.value;
     }
+    if (properties.backglow?.value !== undefined) {
+      currentSettings.backglow = properties.backglow.value;
+    }
     this.currentSettings = currentSettings;
   }
 }

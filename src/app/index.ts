@@ -227,6 +227,7 @@ export class App implements Application<MainDisplayCollection> {
     root.style.setProperty('--color-on', `${settings.color}`);
     root.style.setProperty('--color-off', `${settings.segmentColor}`);
     root.style.setProperty('--color-background', `${settings.backgroundColor}`);
+    root.style.setProperty('--backglow-opacity', `${settings.backglow}`);
   }
 
   registerEvents(): void {

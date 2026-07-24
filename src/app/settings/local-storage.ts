@@ -27,12 +27,12 @@ export class LocalStorageSettingsInterface extends BaseAppSettingsInterface {
   }
 
   private readSettingsFromLocalStorage(): AppSettings {
-    let settingsJson = localStorage.getItem('settings');
+    const settingsJson = localStorage.getItem('settings');
     if (!settingsJson) {
-      settingsJson = JSON.stringify(DEFAULT_SETTINGS);
+      return DEFAULT_SETTINGS;
     }
 
-    return JSON.parse(settingsJson);
+    return { ...DEFAULT_SETTINGS, ...JSON.parse(settingsJson) };
   }
 
   private readSettingsFromQuery(): Partial<AppSettings> {
@@ -71,6 +71,9 @@ export class LocalStorageSettingsInterface extends BaseAppSettingsInterface {
           break;
         case 'seg':
           returnValue = { ...returnValue, segmentColor: value };
+          break;
+        case 'backglow':
+          returnValue = { ...returnValue, backglow: Number.parseFloat(value) };
           break;
         default:
           LOGGER.warning('Unsupported query parameter', key, value);
