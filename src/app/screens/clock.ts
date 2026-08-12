@@ -3,7 +3,11 @@ import { center } from '../../utils';
 import { InputArgs, InputHandler, RenderArgs, Screen } from '../base';
 import { MainDisplayCollection } from '../collection';
 
-import { InteractiveCountdownScreen, ProgressBarScreen } from '.';
+import {
+  InteractiveCountdownScreen,
+  MonthProgressScreen,
+  ProgressBarScreen,
+} from '.';
 import * as versionInfo from '../../assets/version.json';
 import { SettingsScreen } from './settings';
 
@@ -110,6 +114,9 @@ export class ClockScreen
         return true;
       case 'p':
         this.moveToScreen = new ProgressBarScreen();
+        return true;
+      case 'm':
+        this.moveToScreen = new MonthProgressScreen();
         return true;
       case 's':
         this.moveToScreen = new SettingsScreen();

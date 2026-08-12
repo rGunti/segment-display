@@ -26,6 +26,7 @@ import { isWpeEnabled } from './plugins';
 import {
   CountdownScreen,
   InteractiveCountdownScreen,
+  MonthProgressScreen,
   ProgressBarScreen,
   TextScrollerScreen,
   WelcomeScreen,
@@ -60,6 +61,8 @@ function determineDefaultScreen(): Screen<MainDisplayCollection> {
       return new TextScrollerScreen();
     case 'demo-progressbar':
       return new ProgressBarScreen();
+    case 'month-progress':
+      return new MonthProgressScreen();
     default:
       if (loadCountdownTarget()) {
         return new InteractiveCountdownScreen();
